@@ -1,0 +1,123 @@
+:root {
+  --primary-color: #4460f1;
+  --white-color: #fff;
+
+  --light-text-color: #9398b3;
+  --light-bg-color: #f2f4ff;
+  --dark-color: #333;
+
+  --background-color: #fcfcff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #333;
+  background-color: #fcfcff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  font-size: 3em;
+  font-weight: 500;
+  line-height: normal;
+  color: black;
+}
+.hero p {
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+/* —————————————————————————————————————————————————————————————————————— */
+
+.site {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.login {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hero {
+  flex: 1 0 66%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px 0;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 280px;
+  height: 100px;
+  background: linear-gradient(to right, #4460f1, #c471ed, #f64f59);
+  z-index: -1;
+  filter: blur(70px);
+}
+.main {
+  flex: 1 0 33.33%;
+}
+.main form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main form p {
+  position: relative;
+}
+form input {
+  font: inherit;
+  font-size: 14px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0 20px;
+  line-height: 60px;
+  border-radius: 10px;
+}
+input::placeholder {
+  font-family: "Microsoft YaHei";
+  color: #bdcada;
+  font-size: inherit;
+}
+form input:not(.submit) {
+  background-color: #f2f4ff;
+}
+form input.submit {
+  font-weight: 700;
+  color: #fff;
+  background-color: #4460f1;
+  box-shadow: #4460f1 0 18px 30px -10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+form input.submit:hover {
+  box-shadow: #4460f1 0 8px 30px -10px;
+}
