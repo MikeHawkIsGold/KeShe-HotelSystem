@@ -4,3 +4,6 @@
 后端：Springboot,mybatis-plus
 后端插件：hutools,
 JDK:17.0.5
+
+数据库：
+root,123123
