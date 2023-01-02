@@ -4,6 +4,7 @@ import cn.hutool.json.JSONUtil;
 import com.example.keshe.entity.User;
 import com.example.keshe.mapper.UserMapper;
 import jakarta.annotation.Resource;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,7 @@ public class UserController {
     UserMapper userMapper;
 
     @GetMapping("/user")
+    @CrossOrigin
     public String query(){
         List<User> users = userMapper.selectList(null);
         return JSONUtil.toJsonStr(users);

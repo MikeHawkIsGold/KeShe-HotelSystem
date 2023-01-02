@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { login } from "../api/login.js";
+
+login();
+</script>
 
 <template>
   <div id="page" class="site">

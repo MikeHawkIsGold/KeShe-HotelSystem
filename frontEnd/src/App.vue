@@ -1,5 +1,5 @@
 <script setup>
-import loginPage from "./components/loginPage.vue";
+import loginPage from "./views/loginPage.vue";
 </script>
 
 <template>
