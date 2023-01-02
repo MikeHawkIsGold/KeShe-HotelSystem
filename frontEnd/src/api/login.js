@@ -1,7 +1,10 @@
 import request from "./request";
 
-export const login = () => {
-  request.get("/user").then((res) => {
-    console.log(res);
+export const login = (data) => {
+  return request({
+    url: "/login",
+    method: "POST",
+    headers: "Content-Type:application/json",
+    data,
   });
 };

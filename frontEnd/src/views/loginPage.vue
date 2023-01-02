@@ -1,7 +1,17 @@
 <script setup>
+import { reactive } from "vue";
 import { login } from "../api/login.js";
 
-login();
+const formData = reactive({
+  userName: "",
+  pwd: "",
+});
+function loginClick(data) {
+  const res = login(JSON.stringify(data));
+  res.then((res) => {
+    console.log(res);
+  });
+}
 </script>
 
 <template>
@@ -16,17 +26,35 @@ login();
           </p>
         </div>
         <div class="main">
-          <form action="">
+          <el-form :model="formData" class="login-form">
             <p>
-              <input type="text" placeholder="输入您的账号" />
+              <el-form-item>
+                <input
+                  type="text"
+                  v-model="formData.userName"
+                  placeholder="输入您的账号"
+                />
+              </el-form-item>
             </p>
             <p class="password">
-              <input type="password" show-password placeholder="输入您的密码" />
+              <el-form-item>
+                <input
+                  type="password"
+                  v-model="formData.pwd"
+                  show-password
+                  placeholder="输入您的密码"
+              /></el-form-item>
             </p>
             <p>
-              <input type="submit" class="submit" value="登录" />
+              <el-form-item
+                ><input
+                  type="button"
+                  class="submit"
+                  @click="loginClick(formData)"
+                  value="登录"
+              /></el-form-item>
             </p>
-          </form>
+          </el-form>
         </div>
       </div>
     </div>

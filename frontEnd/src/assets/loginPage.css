@@ -84,15 +84,15 @@ h1 {
 .main {
   flex: 1 0 33.33%;
 }
-.main form {
+.main .login-form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.main form p {
+.main .login-form p {
   position: relative;
 }
-form input {
+.login-form input {
   font: inherit;
   font-size: 14px;
   width: 100%;
@@ -107,10 +107,10 @@ input::placeholder {
   color: #bdcada;
   font-size: inherit;
 }
-form input:not(.submit) {
+.login-form input:not(.submit) {
   background-color: #f2f4ff;
 }
-form input.submit {
+.login-form input.submit {
   font-weight: 700;
   color: #fff;
   background-color: #4460f1;
@@ -118,6 +118,6 @@ form input.submit {
   cursor: pointer;
   transition: box-shadow 0.3s;
 }
-form input.submit:hover {
+.login-form input.submit:hover {
   box-shadow: #4460f1 0 8px 30px -10px;
 }

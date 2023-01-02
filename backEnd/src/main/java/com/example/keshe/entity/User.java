@@ -4,15 +4,16 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 @TableName("user")
 public class User {
-    private int id;
+    private Integer id;
     private String type;
     private String userName;
+    private String pwd;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -39,6 +40,4 @@ public class User {
     public void setPwd(String pwd) {
         this.pwd = pwd;
     }
-
-    private String pwd;
 }
